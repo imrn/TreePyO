@@ -6,6 +6,7 @@
 # Copyright 2012, Imran Geriskovan
 # All rights reserved.
 
+
 import __main__
 import inspect
 import types
@@ -45,11 +46,14 @@ class TreePyO(Gtk.ScrolledWindow):
 
         path = self.store.get_path(it)
         for pStr, (p, obj) in list(self.storeMap.items()):
-            if p.is_descendant(path): del self.storeMap[pStr]
+            if p.is_descendant(path):
+                del self.storeMap[pStr]
 
         while True:
             itCh = self.store.iter_children(it)
-            if itCh: self.store.remove(itCh)
+            if itCh:
+                self.store.remove(itCh)
+
             else: break
 
 
@@ -59,10 +63,14 @@ class TreePyO(Gtk.ScrolledWindow):
             it = self.store.append(it, (n, '', n))
         else:
             if info is None:
-                if obj: info = repr(obj)
-                else: info = ''
+                if obj:
+                    info = repr(obj)
+                else:
+                    info = ''
 
-            if len(info) > 80: info = info[:80] + '...'
+            if len(info) > 80:
+                info = info[:80] + '...'
+
             it = self.store.append(it, (n, info, ''))
             self.store.append(it, ('', '', ''))
 
@@ -74,7 +82,8 @@ class TreePyO(Gtk.ScrolledWindow):
 
     def appendList(self, it, pairs):
 
-        for n, obj in pairs: self.append(it, n, obj)
+        for n, obj in pairs:
+            self.append(it, n, obj)
 
 
     def rowCollapsed(self, treeview, it, pIn):
@@ -123,9 +132,13 @@ class TreePyO(Gtk.ScrolledWindow):
                 pref, s, fn = n.partition('_')
                 if s and pref in enums.getSetPrefixes:
                     fs = funcsNew.get(fn)
-                    if fs: fs.append((n, o))
-                    else: funcsNew[fn] = [(n, o)]
-                else: funcsNew[n] = [(n, o)]
+                    if fs:
+                        fs.append((n, o))
+                    else:
+                        funcsNew[fn] = [(n, o)]
+
+                else:
+                    funcsNew[n] = [(n, o)]
 
             self.appendSubGroup(it, 'Internals', ints)
             self.appendSubGroup(it, 'Modules', mods)
@@ -194,8 +207,10 @@ def Filter(func, lIn):
 
     tList, fList = [], []
     for i in lIn:
-        if func(i): tList.append(i)
-        else: fList.append(i)
+        if func(i):
+            tList.append(i)
+        else:
+            fList.append(i)
 
     return tList, fList
 
