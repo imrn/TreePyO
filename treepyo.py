@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # TreePyO:  Object Hierarcy Tree Navigator for Python
-# https://github.com/imrn/treepyo
+# https://github.com/imrn/TreePyO
 #
 # Copyright 2012, Imran Geriskovan
 # All rights reserved.

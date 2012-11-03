@@ -19,7 +19,7 @@ https://github.com/imrn/TreePyO/blob/master/treepyo.jpg
 
 LICENSE
 =======
-TreePyO is released under terms of MIT license. Please see LICENSE.txt
+TreePyO is released under the terms of MIT license. Please see LICENSE.txt
 
 
 REQUIREMENTS
@@ -29,7 +29,7 @@ REQUIREMENTS
 - Python GIR bindings
 - GTK3
 
-On Debian or Ubuntu systems issue the following command:
+On Debian or Ubuntu systems issue the following command.
 (Adjust versions for current releases if needed)::
 
     apt-get install python3-gi gir1.2-gtk-3.0
@@ -38,7 +38,7 @@ On Debian or Ubuntu systems issue the following command:
 USAGE & DETAILS
 ===============
 
-- For a demo just run the file 'treepyo.py'. Object Tree will appear with
+- For a demo, just run the file 'treepyo.py'. Object tree will appear with
   two root nodes: 1) '__main__' module 2) the window itself. Browsing the tree
   is trivial. However, familarity with Python internals is recommended.
   Please see: http://docs.python.org/3.2/reference/datamodel.html
@@ -52,7 +52,7 @@ USAGE & DETAILS
 - While navigating, you'll encounter nodes with trailing '+'.
   (i.e 'Modules +', 'Functions +', etc.) They are SubGroup nodes. They do
   not correspond to actual python objects. They are logical groups whose
-  members otherwise would appear right under the parent. The grouping
+  members would otherwise appear right under the parent. The grouping
   logic depends on the purpose and can be customized via
   TreePyO.testExpandRow function.
 
@@ -84,8 +84,8 @@ USAGE & DETAILS
     Gtk.main()
 
 
-TO DO & PROGRESS (%)
-====================
+TO-DOs & PROGRESS (%)
+=====================
 
 - Decide on the standard view of a Python Environment. (40%)
 
