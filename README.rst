@@ -7,9 +7,9 @@ TreePyO:  Object Hierarcy Tree Navigator for Python
 GENERAL
 =======
 TreePyO enables visual navigation of full object hierarcy within a Python
-runtime. It is ideal for grasping internals of an application. Objects,
-members, classes, functions, modules, lists, dicts, etc; namely, any object
-hierarcy can be navigated as they are alive.
+runtime. It is ideal for grasping internals of an object_group/application.
+Objects, members, classes, functions, modules, lists, dicts, etc; namely,
+any object hierarcy can be navigated as they are alive.
 
 
 SCREENSHOT
@@ -56,10 +56,10 @@ USAGE & DETAILS
   depends on the purpose and can be customized via
   TreePyO.testExpandRow function.
 
-- TreePyO.testExpandRow function is central in the sense that it may
-  control what is/is_not shown on the tree and how. In its
-  current form, it shows everything and provides some grouping:
-  Python Internals, Modules, Getters/Setters, Functions and their arguments.
+- TreePyO.testExpandRow function is central in the sense that it controls
+  what is/is_not shown on the tree and how. In its current form, it shows
+  everything and provides some grouping: Python Internals, Modules,
+  Getters/Setters, Functions and their arguments.
 
 - TreePyO class inherits from Gtk.ScrolledWindow. You can use it like any
   other widget.::
@@ -67,8 +67,8 @@ USAGE & DETAILS
 
     #!/usr/bin/python3
 
-    from treepyo import TreePyO
     from gi.repository import Gtk
+    from treepyo import TreePyO
 
     w = Gtk.Window()
     w.connect('delete-event', Gtk.main_quit)
@@ -92,7 +92,7 @@ TODOS & PROGRESS (%)
 - A primitive context menu is provided.
   Decide on its use for standard view. (10%)
 
-- Compile use cases as a widget. Provide patterns for customizing the tree,
+- Compile use cases. Provide patterns for customizing the tree,
   context menu and actions. (0%)
 
 
