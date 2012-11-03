@@ -62,7 +62,7 @@ USAGE & DETAILS
   Getters/Setters, Functions and their arguments.
 
 - TreePyO class inherits from Gtk.ScrolledWindow. You can use it like any
-  other widget.::
+  other widget::
 
 
     #!/usr/bin/python3
@@ -74,8 +74,8 @@ USAGE & DETAILS
     w.connect('delete-event', Gtk.main_quit)
 
     tr = TreePyO()
-    it = self.store.get_iter_first()
-    tr.append(it, '__main__', __main__) # Add __main__ module to the tree
+    it = tr.store.get_iter_first()
+    tr.append(it, '__main__', __main__) # Add __main__ module to tree
     tr.append(it, 'window', w)          # Or give it any python object
 
     w.add(tr)
