@@ -25,9 +25,9 @@ REQUIREMENTS
 - GTK3
 
 On Debian or Ubuntu systems issue the following command:
-(Adjust versions for current releases if needed)
+(Adjust versions for current releases if needed)::
 
-apt-get install python3-gi gir1.2-gtk-3.0
+    apt-get install python3-gi gir1.2-gtk-3.0
 
 
 USAGE and DETAILS
