@@ -7,7 +7,7 @@ TreePyO:  Object Hierarcy Tree Navigator for Python
 GENERAL
 =======
 TreePyO enables visual navigation of full object hierarcy within a Python
-runtime. It is ideal for grasping the internals an application. Objects,
+runtime. It is ideal for grasping internals of an application. Objects,
 members, classes, functions, modules, lists, dicts, etc; namely, any object
 hierarcy can be navigated as they are alive.
 
@@ -19,7 +19,7 @@ https://github.com/imrn/TreePyO/blob/master/treepyo.jpg
 
 LICENSE
 =======
-TreePyO is released under the terms of MIT license. Please see LICENSE.txt
+TreePyO is released under the terms of MIT license. Please see LICENSE.txt.
 
 
 REQUIREMENTS
@@ -50,10 +50,10 @@ USAGE & DETAILS
   parent object is collapsed and reexpanded.
 
 - While navigating, you'll encounter nodes with trailing '+'.
-  (i.e 'Modules +', 'Functions +', etc.) They are SubGroup nodes. They do
+  (i.e 'Modules +', 'Functions +') They are SubGroup nodes. They do
   not correspond to actual python objects. They are logical groups whose
-  members would otherwise appear right under the parent. The grouping
-  logic depends on the purpose and can be customized via
+  members would otherwise appear right under the parent. Grouping logic
+  depends on the purpose and can be customized via
   TreePyO.testExpandRow function.
 
 - TreePyO.testExpandRow function is central in the sense that it may
@@ -62,7 +62,7 @@ USAGE & DETAILS
   Python Internals, Modules, Getters/Setters, Functions and their arguments.
 
 - TreePyO class inherits from Gtk.ScrolledWindow. You can use it like any
-  other widget in your projects::
+  other widget.::
 
 
     #!/usr/bin/python3
@@ -75,7 +75,7 @@ USAGE & DETAILS
 
     tr = TreePyO()
     it = self.store.get_iter_first()
-    tr.append(it, '__main__', __main__) # Add __main__ module to tree
+    tr.append(it, '__main__', __main__) # Add __main__ module to the tree
     tr.append(it, 'window', w)          # Or give it any python object
 
     w.add(tr)
@@ -84,13 +84,20 @@ USAGE & DETAILS
     Gtk.main()
 
 
-TO-DOs & PROGRESS (%)
-=====================
+TODOS & PROGRESS (%)
+====================
 
-- Decide on the standard view of a Python Environment. (40%)
+- Decide on the view form of a Standard Python Environment. (40%)
 
 - A primitive context menu is provided.
   Decide on its use for standard view. (10%)
 
 - Compile use cases as a widget. Provide patterns for customizing the tree,
   context menu and actions. (0%)
+
+
+KNOWN ISSUES
+============
+
+- Currently, only appends to the tree nodes are allowed.
+  Inserts leave the tree at an inconsistent state.
