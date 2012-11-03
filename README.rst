@@ -12,6 +12,11 @@ members, classes, functions, modules, lists, dicts, etc; namely, any object
 hierarcy can be navigated as they are alive.
 
 
+SCREENSHOT
+==========
+https://github.com/imrn/TreePyO/blob/master/treepyo.jpg
+
+
 LICENSE
 =======
 TreePyO is released under terms of MIT license. Please see LICENSE.txt
@@ -30,8 +35,8 @@ On Debian or Ubuntu systems issue the following command:
     apt-get install python3-gi gir1.2-gtk-3.0
 
 
-USAGE and DETAILS
-=================
+USAGE & DETAILS
+===============
 
 - For a demo just run the file 'treepyo.py'. Object Tree will appear with
   two root nodes: 1) '__main__' module 2) the window itself. Browsing the tree
@@ -57,12 +62,8 @@ USAGE and DETAILS
   Python Internals, Modules, Getters/Setters, Functions and their arguments.
 
 - TreePyO class inherits from Gtk.ScrolledWindow. You can use it like any
-  other widget in your projects.
+  other widget in your projects::
 
-
-EXAMPLE
-=======
-Sample code::
 
     #!/usr/bin/python3
 
@@ -88,7 +89,7 @@ TO DO & PROGRESS (%)
 
 - Decide on the standard view of a Python Environment. (40%)
 
-- A non-functional context menu is provided.
+- A primitive context menu is provided.
   Decide on its use for standard view. (10%)
 
 - Compile use cases as a widget. Provide patterns for customizing the tree,
