@@ -2,7 +2,7 @@
  TreePyO:  Object Hierarcy Tree Navigator for Python
  https://github.com/imrn/TreePyO
 
- Copyright 2012, Imran Geriskovan
+ Copyright 2013, Imran Geriskovan
  All rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining

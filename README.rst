@@ -19,11 +19,6 @@ See TreePyO as it navigates itself:
 https://github.com/imrn/TreePyO/blob/master/treepyo.jpg
 
 
-LICENSE
-=======
-TreePyO is released under the terms of MIT license. Please see LICENSE.txt.
-
-
 REQUIREMENTS
 ============
 - Python >= 3.2
@@ -104,3 +99,10 @@ KNOWN ISSUES
 
 - Currently, only appends are allowed. Inserts leave the tree at an
   inconsistent state.
+
+
+COPYRIGHT & LICENSE
+===================
+Copyright 2013, Imran Geriskovan
+
+TreePyO is released under the terms of MIT license. Please see LICENSE.txt file.
