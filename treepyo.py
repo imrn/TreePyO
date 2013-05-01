@@ -5,6 +5,8 @@
 #
 # Copyright 2012, Imran Geriskovan
 # All rights reserved.
+#
+# TreePyO is released under the terms of MIT license. Please see LICENSE.txt.
 
 
 import __main__
@@ -63,13 +65,11 @@ class TreePyO(Gtk.ScrolledWindow):
             it = self.store.append(it, (n, '', n))
         else:
             if info is None:
-                if obj:
-                    info = repr(obj)
-                else:
-                    info = ''
+                if obj: info = repr(obj)
+                else:   info = ''
 
-            if len(info) > 80:
-                info = info[:80] + '...'
+            if len(info) >= 60:
+                info = info[:60] + '....'
 
             it = self.store.append(it, (n, info, ''))
             self.store.append(it, ('', '', ''))
