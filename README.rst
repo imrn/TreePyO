@@ -26,7 +26,7 @@ REQUIREMENTS
 - Python GIR wrapper
 - GTK3
 
-On Debian or Ubuntu systems issue the following command.
+On Debian or Ubuntu systems, issue the following command.
 (Adjust versions for current releases if needed)::
 
     apt-get install python3-gi gir1.2-gtk-3.0
@@ -46,8 +46,8 @@ USAGE & DETAILS
   (Except for SubGroup nodes. See below.) SubGroups are refreshed when real
   parent object is collapsed and reexpanded.
 
-- While navigating, you'll encounter nodes with trailing '+'.
-  (i.e 'Modules +', 'Functions +') They are SubGroup nodes. They do
+- While navigating, you'll encounter nodes with trailing '+'
+  (i.e. 'Modules +', 'Functions +'). They are SubGroup nodes. They do
   not correspond to actual python objects. They are logical groups whose
   members would otherwise appear right under their parent. Grouping logic
   depends on the purpose and can be customized via
@@ -58,8 +58,8 @@ USAGE & DETAILS
   everything and provides some grouping: Python Internals, Modules,
   Getters/Setters, Functions and their arguments.
 
-- TreePyO class inherits from Gtk.ScrolledWindow. You can use it like any
-  other widget::
+- TreePyO inherits from Gtk.ScrolledWindow. You can use it in your
+  projects like any other GTK widget::
 
 
     #!/usr/bin/python3
@@ -82,8 +82,11 @@ USAGE & DETAILS
     Gtk.main()
 
 
-TODOS & PROGRESS (%)
-====================
+KNOWN ISSUES, TODOS & PROGRESS (%)
+==================================
+
+- Currently, only appends to the branches are allowed. Inserts leave the tree
+  at an inconsistent state. Allow inserts. (0%)
 
 - Decide on the form of a Standard Python Environment view. (40%)
 
@@ -92,13 +95,6 @@ TODOS & PROGRESS (%)
 
 - Compile use cases. Provide patterns for customizing the tree,
   context menu and actions. (0%)
-
-
-KNOWN ISSUES
-============
-
-- Currently, only appends are allowed. Inserts leave the tree at an
-  inconsistent state.
 
 
 COPYRIGHT & LICENSE
