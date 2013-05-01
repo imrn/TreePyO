@@ -26,7 +26,7 @@ REQUIREMENTS
 - Python GIR wrapper
 - GTK3
 
-On Debian or Ubuntu systems issue the following command:
+On Debian or Ubuntu systems issue the following command.
 (Adjust versions for current releases if needed)::
 
     apt-get install python3-gi gir1.2-gtk-3.0
